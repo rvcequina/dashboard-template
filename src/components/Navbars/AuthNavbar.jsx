@@ -17,7 +17,7 @@ export default function Navbar(props) {
               className="text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
               to="/"
             >
-              Notus React
+              MWW Dashboard
             </Link>
             <button
               className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -27,7 +27,7 @@ export default function Navbar(props) {
               <i className="text-white fas fa-bars"></i>
             </button>
           </div>
-          <div
+          {/* <div
             className={
               "lg:flex flex-grow items-center bg-white lg:bg-opacity-0 lg:shadow-none" +
               (navbarOpen ? " block rounded shadow-lg" : " hidden")
@@ -91,7 +91,7 @@ export default function Navbar(props) {
                 </button>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </nav>
     </>

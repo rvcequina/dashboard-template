@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 export default function Register() {
   return (
     <>
@@ -18,22 +18,14 @@ export default function Register() {
                     className="bg-white active:bg-blueGray-50 text-blueGray-700 font-normal px-4 py-2 rounded outline-none focus:outline-none mr-2 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
                     type="button"
                   >
-                    <img
-                      alt="..."
-                      className="w-5 mr-1"
-                      src="assets/img/github.svg"
-                    />
+                     <i className="fab fa-github w-5 mr-1"></i>
                     Github
                   </button>
                   <button
                     className="bg-white active:bg-blueGray-50 text-blueGray-700 font-normal px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
                     type="button"
                   >
-                    <img
-                      alt="..."
-                      className="w-5 mr-1"
-                      src="assets/img/google.svg"
-                    />
+                <i className="fab fa-google w-5 mr-1"></i>
                     Google
                   </button>
                 </div>
@@ -107,12 +99,16 @@ export default function Register() {
                   </div>
 
                   <div className="text-center mt-6">
+                    <Link to={'/login'}>
                     <button
                       className="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
                       type="button"
+                     
                     >
                       Create Account
                     </button>
+                    </Link>
+                    
                   </div>
                 </form>
               </div>

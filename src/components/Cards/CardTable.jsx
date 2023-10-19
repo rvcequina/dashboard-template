@@ -183,22 +183,22 @@ export default function CardTable({ color }) {
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
                   <div className="flex">
                     <img
-                      src="/assets/img/team-1-800x800.jpg"
+                      src="assets/img/team-1-800x800.jpg"
                       alt="..."
                       className="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow"
                     ></img>
                     <img
-                      src="/assets/img/team-2-800x800.jpg"
+                      src="assets/img/team-2-800x800.jpg"
                       alt="..."
                       className="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
                     ></img>
                     <img
-                      src="/assets/img/team-3-800x800.jpg"
+                      src="assets/img/team-3-800x800.jpg"
                       alt="..."
                       className="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
                     ></img>
                     <img
-                      src="/assets/img/team-4-470x470.png"
+                      src="assets/img/team-4-470x470.png"
                       alt="..."
                       className="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
                     ></img>

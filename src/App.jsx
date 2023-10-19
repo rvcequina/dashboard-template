@@ -1,7 +1,7 @@
-import React,{ useState } from 'react'
+import React, { useState } from 'react'
 
 
-import { BrowserRouter,Routes, Route,  Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // views
 
@@ -31,7 +31,7 @@ function App() {
       <div>
         <h2>Parent Component</h2>
         <Routes>
-          
+
         </Routes>
       </div>
     );
@@ -44,31 +44,31 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* add routes with layouts */}
-          <Route path='admin'  element={<Admin/>}>
-            <Route path="dashboard"  element={<Dashboard/>} />
-            <Route path="maps"  element={<Maps/>} />
-            <Route path="settings"  element={<Settings/>} />
-            <Route path="tables"  element={<Tables/>} />
+          <Route path='admin' element={<Admin />}>
+            <Route index element={<Dashboard />} />
+            <Route path="dashboard" element={<Dashboard />} />
+            {/* <Route path="maps" element={<Maps />} /> */}
+            <Route path="settings" element={<Settings />} />
+            <Route path="tables" element={<Tables />} />
+            <Route
+                  path="*"
+                  element={<Navigate to="/admin" replace />}
+              />
           </Route>
-       
-         
-            
+
+          {/* <Route path="auth" element={<Auth />}>
+            <Route path="login" exact element={<Login />} />
+            <Route path="register" exact element={<Register />} />
+          </Route> */}
           
-        
-          
-          <Route path="auth" element={<Auth/>}>
-            <Route path="login" exact element={<Login/>} />
-            <Route path="register" exact element={<Register/>} />
-          </Route>
           {/* add routes without layouts */}
-          <Route path="landing" exact element={<Landing/>} />
-          <Route path="profile" exact element={<Profile/>} />
-          <Route path="/" exact element={<Index/>} />
-          {/* add redirect for first page */}
-          {/* <Route
-        path="*"
-        element={<Navigate to="/" replace />}
-    /> */}
+          <Route path="landing" exact element={<Landing />} />
+          <Route path="profile" exact element={<Profile />} />
+          <Route path="/" element={<Auth />} >
+            <Route index element={<Login />} />
+            <Route path="login" exact element={<Login />} />
+            <Route path="register" exact element={<Register />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
